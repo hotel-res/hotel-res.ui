@@ -7,6 +7,7 @@ import HotelInfoPage from './HotelInfoPage';
 import NeighborhoodPage from './NeighborhoodPage';
 import FaqPage from './FaqPage';
 import TeamPage from './TeamPage';
+import BookPage from './BookPage';
 
 const AppContainer = styled.div`
   font-family: Arial, sans-serif;
@@ -23,6 +24,7 @@ function App() {
           <Route path="/neighborhood" element={<NeighborhoodPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/team" element={<TeamPage />} />
+          <Route path="/book" element={<BookPage />} />
         </Routes>
       </AppContainer>
     </Router>
