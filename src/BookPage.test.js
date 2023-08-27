@@ -3,6 +3,6 @@ import BookPage from './BookPage';
 
 test('renders Book Page', () => {
   render(<BookPage />);
-  const faqTitleElement = screen.getByText(/Books Page/i);
+  const faqTitleElement = screen.getByText(/Book Page/i);
   expect(faqTitleElement).toBeInTheDocument();
 });
