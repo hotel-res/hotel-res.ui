@@ -16,6 +16,20 @@ const NavigationContainer = styled.nav`
   margin: 0 auto;
 `;
 
+const NavButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  margin-right: 1rem;
+  position: relative;
+
+  &:hover .dropdown-content {
+  display: block;
+  }
+`;
+
 const DropdownButton = styled.button`
   background-color: transparent;
   border: none;
@@ -61,13 +75,16 @@ const Header = () => {
           </DropdownContent>
         </DropdownButton>
         <Link to="/rooms">
-          <DropdownButton>Rooms</DropdownButton>
+          <NavButton>Rooms</NavButton>
         </Link>
         <a href="/neighborhood">
-          <DropdownButton>Neighborhood</DropdownButton>
+          <NavButton>Neighborhood</NavButton>
         </a>
         <a href="/faq">
-          <DropdownButton>FAQ</DropdownButton>
+          <NavButton>FAQ</NavButton>
+        </a>
+        <a href="/book">
+          <NavButton>Book</NavButton>
         </a>
       </NavigationContainer>
     </HeaderContainer>
