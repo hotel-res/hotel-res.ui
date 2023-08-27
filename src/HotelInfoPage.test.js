@@ -3,6 +3,6 @@ import HotelInfoPage from './HotelInfoPage';
 
 test('renders Hotel Info Page', () => {
   render(<HotelInfoPage />);
-  const titleElement = screen.getByText(/Available Rooms/i);
+  const titleElement = screen.getByText(/Hotel Info/i);
   expect(titleElement).toBeInTheDocument();
 });

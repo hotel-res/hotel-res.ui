@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders App', () => {
   render(<App />);
-  const homePageTitleElement = screen.getByText(/Available Rooms/i);
-  expect(homePageTitleElement).toBeInTheDocument();
+  const titleElement = screen.getByText(/Hotel Info Page/i);
+  expect(titleElement).toBeInTheDocument();
 });
