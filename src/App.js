@@ -1,45 +1,31 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import Header from './Header';
-import RoomCard from './RoomCard';
+import RoomsPage from './RoomsPage';
+import HotelInfoPage from './HotelInfoPage';
+import NeighborhoodPage from './NeighborhoodPage';
+import FaqPage from './FaqPage';
+import TeamPage from './TeamPage';
 
 const AppContainer = styled.div`
   font-family: Arial, sans-serif;
-  text-align: center;
 `;
-
-const roomsData = [
-  {
-    id: 1,
-    image: 'standard-rm-logo.png',
-    title: 'Standard Room',
-    description: 'A comfortable and cozy standard room.',
-  },
-  {
-    id: 2,
-    image: 'deluxe-rm-logo.png',
-    title: 'Deluxe Room',
-    description: 'A luxurious deluxe room with a great view.',
-  },
-  // Add more room data...
-];
 
 function App() {
   return (
-    <AppContainer>
-      <Header />
-      <h2>Available Rooms</h2>
-      <div>
-        {roomsData.map((room) => (
-          <RoomCard
-            key={room.id}
-            image={room.image}
-            title={room.title}
-            description={room.description}
-          />
-        ))}
-      </div>
-    </AppContainer>
+    <Router>
+      <AppContainer>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HotelInfoPage />} />
+          <Route path="/rooms" element={<RoomsPage />} />
+          <Route path="/neighborhood" element={<NeighborhoodPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/team" element={<TeamPage />} />
+        </Routes>
+      </AppContainer>
+    </Router>
   );
 }
 
