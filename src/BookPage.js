@@ -1,13 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { Container, Grid, TextField } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-
-const PageContainer = styled.div`
-  padding: 2rem;
-`;
 
 const BookPage = () => {
   const [startDate, setStartDate] = React.useState(null);
